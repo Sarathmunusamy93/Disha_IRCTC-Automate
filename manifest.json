@@ -1,0 +1,17 @@
+{
+  "name": "Disha Automation",
+  "description": "Demonstration for Disha automation app ",
+  "version": "3.0",
+  "manifest_version": 2,
+  "permissions": ["tabs", "*://*.irctc.corover.ai/"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "*://*.irctc.corover.ai/"],
+      "js": ["jquery-1.10.2.js", "contentScript.js", "indexedDB.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
+}
